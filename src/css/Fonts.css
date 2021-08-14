@@ -1,15 +1,22 @@
 @font-face {
   font-family: Sohne-Breit;
-  /* src: url('path/filename.otf'); */
   src: url('../fonts/test-soehne-breit-leicht.woff2') format('woff2');
 }
 
 @font-face {
   font-family: Sohne-Breit-Extrafett;
-  /* src: url('path/filename.otf'); */
   src: url('../fonts/test-soehne-breit-extrafett.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Test-Pitch-Regular;
+  src: url('../fonts/test-pitch-regular.woff2') format('woff2');
 }
 
 .Sohne-Breit {
   font-family: Sohne-Breit;
+}
+
+.Test-Pitch-Regular {
+  font-family: Test-Pitch-Regular;
 }

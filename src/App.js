@@ -9,14 +9,13 @@ import './css/TaskForm.css';
 
 export const App = () => {
   const [taskList, setTaskList] = useState([
-    { id: uuidv4(), task: 'Task 1', completed: false },
-    { id: uuidv4(), task: 'Task 2', completed: true },
-    { id: uuidv4(), task: 'Task 3', completed: false },
-    { id: uuidv4(), task: 'Task 4', completed: true },
-    { id: uuidv4(), task: 'Task 5', completed: false },
-    { id: uuidv4(), task: 'Task 6', completed: true },
-    { id: uuidv4(), task: 'Task 7', completed: false },
-    { id: uuidv4(), task: 'Task 8', completed: true },
+    { id: uuidv4(), task: 'Pick up dry cleaning', completed: false },
+    { id: uuidv4(), task: 'Hike Mt. Kilimanjaro', completed: true },
+    { id: uuidv4(), task: 'Dog groomer', completed: false },
+    { id: uuidv4(), task: 'Get an undercut', completed: true },
+    { id: uuidv4(), task: 'Visit dentist', completed: false },
+    { id: uuidv4(), task: 'Get orchids at florist', completed: true },
+    { id: uuidv4(), task: 'Piano lesson', completed: false },
   ]);
 
   const toggleComplete = id => {
@@ -60,21 +59,17 @@ export const App = () => {
   return (
     <div>
       <main>
-        <div
-          className='header Sohne-Breit'
-          style={{ position: 'sticky', top: 0 }}
-        >
-          <h1 className=''>
+        <header className='header Sohne-Breit' style={{ position: 'sticky' }}>
+          <h1 className='Test-Pitch-Regular' style={{}}>
             To-do List <span>A simple React Todo List App</span>
           </h1>
-        </div>
+        </header>
         <div className='App Sohne-Breit' style={{ position: 'static' }}>
           <ul>{readTasks}</ul>
-          <TaskForm createTask={createTask} />
+          <footer style={{ position: 'sticky' }}>
+            <TaskForm createTask={createTask} />
+          </footer>
         </div>
-        {/* <div style={{ position: 'sticky', bottom: 100 }}>
-          <TaskForm createTask={createTask} />
-        </div> */}
       </main>
     </div>
   );

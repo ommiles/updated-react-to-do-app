@@ -22,7 +22,9 @@ export const TaskForm = ({ createTask }) => {
 
   return (
     <form className='new-task-form' onSubmit={handleSubmit}>
-      <label htmlFor='task'>New task</label>
+      <label className='Test-Pitch-Regular' htmlFor='task'>
+        Add a New Task:
+      </label>
       <input
         value={userInput.task}
         onChange={handleChange}
