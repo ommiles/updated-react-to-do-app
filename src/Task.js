@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
 
-export const Task = ({ task, deleteTask }) => {
+export const Task = ({ task, toggleComplete, deleteTask }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [tasks, setTasks] = useState(task.task);
 
@@ -14,8 +14,8 @@ export const Task = ({ task, deleteTask }) => {
     setIsEditing(!isEditing);
   };
 
-  const toggleComplete = () => {
-    console.log('toggleComplete');
+  const toggleCompleted = e => {
+    toggleComplete(e.target.id);
   };
 
   const handleUpdate = e => {
@@ -42,7 +42,7 @@ export const Task = ({ task, deleteTask }) => {
       <div className='Todo'>
         <li
           id={task.id}
-          onClick={toggleComplete}
+          onClick={toggleCompleted}
           className={task.completed ? 'Todo-task completed' : 'Todo-task'}
         >
           {task.task}

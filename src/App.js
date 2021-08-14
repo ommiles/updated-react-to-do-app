@@ -10,6 +10,16 @@ export const App = () => {
     { id: uuidv4(), task: 'Task 2', completed: true },
   ]);
 
+  const toggleComplete = id => {
+    const updatedTasks = taskList.map(task => {
+      if (task.id === id) {
+        return { ...task, completed: !task.completed };
+      }
+      return task;
+    });
+    setTaskList(updatedTasks);
+  };
+
   const createTask = newTask => {
     setTaskList([...taskList, newTask]);
   };
@@ -23,7 +33,12 @@ export const App = () => {
   };
 
   const readTasks = taskList.map(task => (
-    <Task key={task.id} task={task} deleteTask={deleteTask} />
+    <Task
+      key={task.id}
+      task={task}
+      toggleComplete={toggleComplete}
+      deleteTask={deleteTask}
+    />
   ));
 
   return (
