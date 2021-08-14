@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/updated-react-to-do-app/static/css/main.91fd2c60.chunk.css",
+    "main.js": "/updated-react-to-do-app/static/js/main.65799e4d.chunk.js",
+    "main.js.map": "/updated-react-to-do-app/static/js/main.65799e4d.chunk.js.map",
+    "runtime-main.js": "/updated-react-to-do-app/static/js/runtime-main.86138454.js",
+    "runtime-main.js.map": "/updated-react-to-do-app/static/js/runtime-main.86138454.js.map",
+    "static/js/2.9694c01f.chunk.js": "/updated-react-to-do-app/static/js/2.9694c01f.chunk.js",
+    "static/js/2.9694c01f.chunk.js.map": "/updated-react-to-do-app/static/js/2.9694c01f.chunk.js.map",
+    "static/js/3.2d838c97.chunk.js": "/updated-react-to-do-app/static/js/3.2d838c97.chunk.js",
+    "static/js/3.2d838c97.chunk.js.map": "/updated-react-to-do-app/static/js/3.2d838c97.chunk.js.map",
+    "index.html": "/updated-react-to-do-app/index.html",
+    "static/css/main.91fd2c60.chunk.css.map": "/updated-react-to-do-app/static/css/main.91fd2c60.chunk.css.map",
+    "static/js/2.9694c01f.chunk.js.LICENSE.txt": "/updated-react-to-do-app/static/js/2.9694c01f.chunk.js.LICENSE.txt",
+    "static/media/Fonts.css": "/updated-react-to-do-app/static/media/test-soehne-breit-leicht.4bc44f4d.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.86138454.js",
+    "static/js/2.9694c01f.chunk.js",
+    "static/css/main.91fd2c60.chunk.css",
+    "static/js/main.65799e4d.chunk.js"
+  ]
+}
