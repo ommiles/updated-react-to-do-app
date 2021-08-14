@@ -24,8 +24,14 @@ export const App = () => {
     setTaskList([...taskList, newTask]);
   };
 
-  const updateTask = () => {
-    console.log('update');
+  const updateTask = (id, updatedTask) => {
+    const updatedTaskList = taskList.map(task => {
+      if (task.id === id) {
+        return { ...task, task: updatedTask };
+      }
+      return task;
+    });
+    setTaskList(updatedTaskList);
   };
 
   const deleteTask = id => {
@@ -37,6 +43,7 @@ export const App = () => {
       key={task.id}
       task={task}
       toggleComplete={toggleComplete}
+      updateTask={updateTask}
       deleteTask={deleteTask}
     />
   ));

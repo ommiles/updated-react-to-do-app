@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
 
-export const Task = ({ task, toggleComplete, deleteTask }) => {
+export const Task = ({ task, toggleComplete, updateTask, deleteTask }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [currentTask, setCurrentTask] = useState(task.task);
 
@@ -20,7 +20,8 @@ export const Task = ({ task, toggleComplete, deleteTask }) => {
 
   const handleUpdate = e => {
     e.preventDefault();
-    console.log('update');
+    updateTask(task.id, currentTask);
+    toggleForm();
   };
 
   const handleDelete = e => {
@@ -33,7 +34,7 @@ export const Task = ({ task, toggleComplete, deleteTask }) => {
     result = (
       <div className='Todo'>
         <form className='Todo-edit-form' onSubmit={handleUpdate}>
-          <input onChange={handleChange} value={task.task} type='text' />
+          <input onChange={handleChange} value={currentTask} type='text' />
           <button>Save</button>
         </form>
       </div>
