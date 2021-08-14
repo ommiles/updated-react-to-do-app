@@ -1,0 +1,88 @@
+#Task-buttons svg {
+  width: 1em;
+  height: 1em;
+  pointer-events: none;
+  margin: 0.4em;
+  -webkit-appearance: none;
+  color: #fff;
+}
+
+#Task-buttons {
+  flex-shrink: 0;
+  padding-left: 0.7em;
+}
+
+.task {
+  display: flex;
+  margin: 0 -3rem 4px;
+  padding: 1.1rem 3rem;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.completed {
+  opacity: 0.4;
+}
+
+.todo-task {
+  position: relative;
+  transition: opacity 0.4s linear;
+}
+
+.todo-task.completed {
+  opacity: 0.6;
+}
+
+.todo-task.completed:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -0.5rem;
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  animation: strikeitem 0.5s ease-out 0s forwards;
+}
+
+@keyframes strikeitem {
+  to {
+    width: calc(100% + 1rem);
+  }
+}
+
+#Task-edit-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#Task-edit-form button {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#Task-edit-form button:hover {
+  color: black;
+  background: white;
+  border: 1px solid black;
+}
+
+#Task-edit-form input {
+  flex-grow: 1;
+  border: none;
+  margin: 0 1.5em 0 0;
+  font-size: initial;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#Task-edit-form input:focus {
+  color: grey;
+}
+
+.new-task-form {
+  display: flex;
+  flex-wrap: wrap;
+}

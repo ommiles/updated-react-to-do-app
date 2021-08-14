@@ -1,13 +1,22 @@
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { Task } from './Task';
-import { TodoForm } from './TodoForm';
-import './App.css';
+import { TaskForm } from './TaskForm';
+import './css/App.css';
+import './css/Fonts.css';
+import './css/Task.css';
+import './css/TaskForm.css';
 
 export const App = () => {
   const [taskList, setTaskList] = useState([
     { id: uuidv4(), task: 'Task 1', completed: false },
     { id: uuidv4(), task: 'Task 2', completed: true },
+    { id: uuidv4(), task: 'Task 3', completed: false },
+    { id: uuidv4(), task: 'Task 4', completed: true },
+    { id: uuidv4(), task: 'Task 5', completed: false },
+    { id: uuidv4(), task: 'Task 6', completed: true },
+    { id: uuidv4(), task: 'Task 7', completed: false },
+    { id: uuidv4(), task: 'Task 8', completed: true },
   ]);
 
   const toggleComplete = id => {
@@ -49,12 +58,24 @@ export const App = () => {
   ));
 
   return (
-    <div className='App'>
-      <h1>
-        To-do List <span>A simple React Todo List App</span>
-      </h1>
-      <ul>{readTasks}</ul>
-      <TodoForm createTask={createTask} />
+    <div>
+      <main>
+        <div
+          className='header Sohne-Breit'
+          style={{ position: 'sticky', top: 0 }}
+        >
+          <h1 className=''>
+            To-do List <span>A simple React Todo List App</span>
+          </h1>
+        </div>
+        <div className='App Sohne-Breit' style={{ position: 'static' }}>
+          <ul>{readTasks}</ul>
+          <TaskForm createTask={createTask} />
+        </div>
+        {/* <div style={{ position: 'sticky', bottom: 100 }}>
+          <TaskForm createTask={createTask} />
+        </div> */}
+      </main>
     </div>
   );
 };

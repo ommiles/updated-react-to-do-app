@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-export const TodoForm = ({ createTask }) => {
+export const TaskForm = ({ createTask }) => {
   const [userInput, setUserInput] = useReducer(
     (state, newState) => ({ ...state, ...newState }),
     {
@@ -21,7 +21,7 @@ export const TodoForm = ({ createTask }) => {
   };
 
   return (
-    <form className='NewTaskForm' onSubmit={handleSubmit}>
+    <form className='new-task-form' onSubmit={handleSubmit}>
       <label htmlFor='task'>New task</label>
       <input
         value={userInput.task}

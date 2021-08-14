@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 export const Task = ({ task, toggleComplete, updateTask, deleteTask }) => {
+  const inputRef = useRef(null);
+
   const [isEditing, setIsEditing] = useState(false);
   const [currentTask, setCurrentTask] = useState(task.task);
+
+  useEffect(() => {
+    if (isEditing) {
+      inputRef.current.focus();
+    }
+  }, [isEditing]);
 
   const handleChange = e => {
     setCurrentTask(e.target.value);
@@ -32,24 +40,29 @@ export const Task = ({ task, toggleComplete, updateTask, deleteTask }) => {
 
   if (isEditing) {
     result = (
-      <div className='Todo'>
-        <form className='Todo-edit-form' onSubmit={handleUpdate}>
-          <input onChange={handleChange} value={currentTask} type='text' />
+      <div className='task'>
+        <form id='Task-edit-form' onSubmit={handleUpdate}>
+          <input
+            onChange={handleChange}
+            value={currentTask}
+            type='text'
+            ref={inputRef}
+          />
           <button>Save</button>
         </form>
       </div>
     );
   } else {
     result = (
-      <div className='Todo'>
+      <div className='task'>
         <li
           id={task.id}
           onClick={toggleCompleted}
-          className={task.completed ? 'Todo-task completed' : 'Todo-task'}
+          className={task.completed ? 'todo-task completed' : 'todo-task'}
         >
           {task.task}
         </li>
-        <div id='Todo-buttons' className={task.completed ? 'completed' : null}>
+        <div id='Task-buttons' className={task.completed ? 'completed' : null}>
           <button onClick={toggleForm}>
             <FontAwesomeIcon icon={faPen} />
           </button>

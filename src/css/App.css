@@ -1,0 +1,90 @@
+main {
+  background-color: #121212;
+  box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.1);
+}
+
+.App {
+  max-height: 50vh;
+  /* display: flex; */
+  /* position: relative; */
+  overflow: scroll;
+  /* margin: 4rem auto; */
+  /* padding: 2rem 3rem 3rem; */
+  max-width: 500px;
+  background-color: #121212;
+  padding: 0 100px 100px 100px;
+  /* box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.1); */
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  /* width: 100%; */
+  /* margin: auto; */
+}
+
+ul {
+  margin-top: 2.6rem;
+  list-style: none;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 2.6rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+span {
+  display: block;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+  margin-left: 3px;
+  margin-top: 0.2rem;
+}
+
+input,
+select,
+textarea {
+  color: #fff;
+}
+
+form {
+  color: #fff;
+}
+
+button {
+  color: #fff;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  outline: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: Sohne-Breit-Extrafett;
+  letter-spacing: 1px;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  outline: transparent;
+  font-family: Sohne-Breit;
+}
+
+::-webkit-input-placeholder {
+  color:grey;
+}
+
+::-moz-placeholder {
+  color:grey;
+}
+
+::-ms-placeholder {
+  color:grey;
+}
+
+::placeholder {
+  color:grey;
+}
