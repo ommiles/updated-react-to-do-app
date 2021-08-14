@@ -18,6 +18,10 @@ li {
   /* color: #fff; */
 }
 
+.completed {
+  opacity: 0.4;
+}
+
 button {
   background-color: transparent;
   border: none;

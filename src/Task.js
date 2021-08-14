@@ -4,13 +4,13 @@ import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 export const Task = ({ task, toggleComplete, deleteTask }) => {
   const [isEditing, setIsEditing] = useState(false);
-  const [tasks, setTasks] = useState(task.task);
+  const [currentTask, setCurrentTask] = useState(task.task);
 
-  const handleChange = () => {
-    console.log('change');
+  const handleChange = e => {
+    setCurrentTask(e.target.value);
   };
 
-  const toggleEdit = () => {
+  const toggleForm = () => {
     setIsEditing(!isEditing);
   };
 
@@ -28,6 +28,7 @@ export const Task = ({ task, toggleComplete, deleteTask }) => {
   };
 
   let result;
+
   if (isEditing) {
     result = (
       <div className='Todo'>
@@ -47,8 +48,8 @@ export const Task = ({ task, toggleComplete, deleteTask }) => {
         >
           {task.task}
         </li>
-        <div id='Todo-buttons'>
-          <button onClick={toggleEdit}>
+        <div id='Todo-buttons' className={task.completed ? 'completed' : null}>
+          <button onClick={toggleForm}>
             <FontAwesomeIcon icon={faPen} />
           </button>
           <button id={task.id} onClick={handleDelete}>
