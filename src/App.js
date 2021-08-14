@@ -1,28 +1,37 @@
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { Todo } from './Todo';
+import { Task } from './Task';
 import { TodoForm } from './TodoForm';
 import './App.css';
 
 export const App = () => {
-
-  const [tasks, setTasks] = useState([
-    { id: uuidv4(), task: 'task 1', completed: false },
-    { id: uuidv4(), task: 'task 2', completed: true },
+  const [taskList, setTaskList] = useState([
+    { id: uuidv4(), task: 'Task 1', completed: false },
+    { id: uuidv4(), task: 'Task 2', completed: true },
   ]);
 
   const createTask = newTask => {
-    setTasks([...tasks, newTask]);
-  }
+    setTaskList([...taskList, newTask]);
+  };
 
-  const todoList = tasks.map(todo => <Todo key={todo.id} todo={todo} />);
+  const updateTask = () => {
+    console.log('update');
+  };
+
+  const deleteTask = id => {
+    setTaskList(taskList.filter(task => task.id !== id));
+  };
+
+  const readTasks = taskList.map(task => (
+    <Task key={task.id} task={task} deleteTask={deleteTask} />
+  ));
 
   return (
     <div className='App'>
       <h1>
         To-do List <span>A simple React Todo List App</span>
       </h1>
-      <ul>{todoList}</ul>
+      <ul>{readTasks}</ul>
       <TodoForm createTask={createTask} />
     </div>
   );
