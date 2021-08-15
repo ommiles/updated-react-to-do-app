@@ -1,7 +1,44 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was inspired by Colt Steele's Udemy [Modern React Bootcamp Course](https://www.udemy.com/course/modern-react-bootcamp/) and bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+![project screenshot](./src/assets/screenshot.png)
+
+## Table of Contents
+1. [Requirements](#requirements)
+2. [Details](#details)
+3. [Installation](#installation)
+4. [Credits](#credits)
+5. [FAQs](#faqs)
+
+## Requirements *
+
+* helpful steps from 
+
+```
+$ git clone [repository url]
+$ cd [local repository]
+```
+
+Delete the node_modules folder and any 'lock' files such as yarn.lock or package-lock.json if present.
+
+```
+$ npm install
+$ npm i uuid
+$ yarn add @fortawesome/fontawesome-svg-core
+$ yarn add @fortawesome/free-solid-svg-icons
+$ yarn add @fortawesome/react-fontawesome
+$ yarn start
+```
+
+Available spripts to get started are below.
+## Details
+
+* React
+* React Hooks
+* [UUID Generator](https://www.npmjs.com/package/uuid)
+* [Font Awesome](https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react)
+* Typefaces by [Klim Type Foundry](https://klim.co.nz/)
 ## Available Scripts
 
 In the project directory, you can run:
@@ -68,3 +105,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Credits
+
+This project was inspired by Colt Steele's Udemy [Modern React Bootcamp Course](https://www.udemy.com/course/modern-react-bootcamp/).
+
+## FAQs
+
+> If you'd like to reach out with feedback, please [let me know](https://ommiles.com/)!
